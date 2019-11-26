@@ -22,6 +22,16 @@ update_geom_defaults("area", list(fill = fill_color, color = bgcolor, size = 1))
 update_geom_defaults("bar", list(fill = gray))
 update_geom_defaults("col", list(fill = gray))
 
+#' Default space theme (light)
+#'
+#' Add to a ggplot2 plot object to apply.
+#'
+#' @param base_size base font size
+#' @param grid show grid lines
+#' @param mono use monospace font
+#'
+#' @return theme object
+#' @export
 theme_space <- function(base_size = 8, grid = TRUE, mono = FALSE) {
     family <- ifelse(mono, "space-mono", "open-sans")
     theme_bw(base_size = base_size) +
