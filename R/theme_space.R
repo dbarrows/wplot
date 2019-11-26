@@ -33,7 +33,8 @@ update_geom_defaults("col", list(fill = gray))
 #' @return theme object
 #' @export
 theme_space <- function(base_size = 8, grid = TRUE, mono = FALSE) {
-    family <- ifelse(mono, "space-mono", "open-sans")
+    #family <- ifelse(mono, "space-mono", "open-sans")
+    family <- "sans"
     theme_bw(base_size = base_size) +
     theme(
         line = element_line(),

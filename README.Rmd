@@ -1,0 +1,39 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+    collapse = TRUE,
+    comment = "#>",
+    dev = 'svglite',
+    fig.path = "man/figures/README-",
+    out.width = "100%"
+)
+```
+
+# spaceplot
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+A clean theme for `ggplot2`, and some `geom` defaults to match.
+
+## Installation
+
+Install from [GitHub](https://github.com/) using the [devtools](https://cran.r-project.org/web/packages/devtools) package:
+
+```{r}
+#devtools::install_github("dbarrows/spaceplot")
+```
+
+Possible CRAN version in the future.
+
+## Examples
+
+```{r scatter}
+library(spaceplot)
+ggplot(mpg, aes(displ, hwy, color = class)) + geom_point() + theme_space()
+```
