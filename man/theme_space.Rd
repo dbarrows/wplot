@@ -4,7 +4,7 @@
 \alias{theme_space}
 \title{Default space theme (light)}
 \usage{
-theme_space(base_size = 8, grid = TRUE, mono = FALSE)
+theme_space(base_size = 10, grid = TRUE, mono = FALSE)
 }
 \arguments{
 \item{base_size}{base font size}

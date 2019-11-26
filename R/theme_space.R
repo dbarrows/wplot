@@ -1,27 +1,3 @@
-library(ggplot2)
-suppressMessages(library(showtext))
-font_add("space-mono", regular = "SpaceMono-Regular.ttf")
-font_add("open-sans", regular = "OpenSans-Regular.ttf")
-showtext_auto()
-
-black <- "#000000"
-gray <- "#808080"
-white <- "#ffffff"
-
-bgcolor <- white
-textcolor <- black
-gridcolor <- black
-tickcolor <- black
-
-default_color <- black
-fill_color <- gray
-update_geom_defaults("line", list(color = default_color, size = 0.35))
-update_geom_defaults("abline", list(color = default_color))
-update_geom_defaults("point", list(color = default_color))
-update_geom_defaults("area", list(fill = fill_color, color = bgcolor, size = 1))
-update_geom_defaults("bar", list(fill = gray))
-update_geom_defaults("col", list(fill = gray))
-
 #' Default space theme (light)
 #'
 #' Add to a ggplot2 plot object to apply.
@@ -32,9 +8,9 @@ update_geom_defaults("col", list(fill = gray))
 #'
 #' @return theme object
 #' @export
-theme_space <- function(base_size = 8, grid = TRUE, mono = FALSE) {
-    #family <- ifelse(mono, "space-mono", "open-sans")
-    family <- "sans"
+#' @import ggplot2
+theme_space <- function(base_size = 10, grid = TRUE, mono = FALSE) {
+    family <- ifelse(mono, "space-mono", "open-sans")
     theme_bw(base_size = base_size) +
     theme(
         line = element_line(),
