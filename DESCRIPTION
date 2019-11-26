@@ -1,13 +1,13 @@
 Package: spaceplot
-Title: What the Package Does (One Line, Title Case)
+Title: A Clean ggplot Theme
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Dexter",
+           family = "Barrows",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+           email = "dexter@barrows.io",
+           comment = c(ORCID = "0000-0001-8169-8938"))
 Description: What the package does (one paragraph).
-License: What license it uses
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
