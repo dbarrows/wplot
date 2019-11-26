@@ -15,7 +15,7 @@ Install from [GitHub](https://github.com/) using the
 [devtools](https://cran.r-project.org/web/packages/devtools) package:
 
 ``` r
-#devtools::install_github("dbarrows/spaceplot")
+devtools::install_github("dbarrows/spaceplot")
 ```
 
 Possible CRAN version in the future.
@@ -23,8 +23,10 @@ Possible CRAN version in the future.
 ## Examples
 
 ``` r
+library(ggplot2)
 library(spaceplot)
-ggplot(mpg, aes(displ, hwy, color = class)) + geom_point() + theme_space()
+
+ggplot(mpg, aes(displ, hwy, color = class)) + geom_point()
 ```
 
 <img src="man/figures/README-scatter-1.svg" width="100%" />
