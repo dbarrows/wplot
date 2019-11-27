@@ -9,7 +9,7 @@
     update_geom_defaults("bar", list(fill = fill_color, size = 1, color = "white"))
     update_geom_defaults("col", list(fill = fill_color, size = 1, color = "white"))
 
-    font_paths(system.file("fonts", package = "spaceplot"))
+    font_paths(system.file("fonts", package = "emplot"))
     font_add("et-book", regular = "et-book-roman-line-figures.ttf")
     font_add("lato", regular = "Lato-Regular.ttf")
     showtext_auto()
