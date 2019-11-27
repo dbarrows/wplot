@@ -4,13 +4,13 @@
 #'
 #' @param base_size base font size
 #' @param grid show grid lines
-#' @param mono use monospace font
+#' @param serif use serif font
 #'
 #' @return theme object
 #' @export
 #' @import ggplot2
-theme_space <- function(base_size = 10, grid = TRUE, mono = FALSE) {
-    family <- ifelse(mono, "space-mono", "open-sans")
+theme_space <- function(base_size = 12, grid = TRUE, serif = FALSE) {
+    family <- ifelse(serif, "et-book", "lato")
     theme_bw(base_size = base_size) +
     theme(
         line = element_line(),
@@ -23,7 +23,7 @@ theme_space <- function(base_size = 10, grid = TRUE, mono = FALSE) {
         axis.ticks = element_blank(),
         legend.key = element_rect(fill = bgcolor),
         panel.grid = element_blank(),
-        panel.grid.major = element_line(colour = gridcolor, linetype = "dotted", size = ifelse(grid, 0.1, 0)),
+        panel.grid.major = element_line(colour = gridcolor, linetype = "dotted", size = ifelse(grid, 0.075, 0)),
         plot.title = element_text(hjust = -0.2, vjust = 2, size = rel(1.2), color = textcolor),
         plot.margin = margin(0.75, 0.75, 0.75, 0.75, "cm"),
         plot.background = element_rect(),
