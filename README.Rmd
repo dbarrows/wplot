@@ -29,7 +29,7 @@ A clean theme for `ggplot2` with matching `geom` defaults.
 Install from [GitHub](https://github.com/) using the [devtools](https://cran.r-project.org/web/packages/devtools) package:
 
 ```{r, eval = FALSE}
-devtools::install_github("dbarrows/spaceplot")
+devtools::install_github("dbarrows/emplot")
 ```
 
 Possible CRAN version in the future.
