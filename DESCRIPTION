@@ -1,5 +1,5 @@
-Package: spaceplot
-Title: A Clean ggplot Theme
+Package: emplot
+Title: Emplot
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Dexter",
@@ -7,7 +7,7 @@ Authors@R:
            role = c("aut", "cre"),
            email = "dexter@barrows.io",
            comment = c(ORCID = "0000-0001-8169-8938"))
-Description: What the package does (one paragraph).
+Description: A clean ggplot theme and matching geom defaults.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

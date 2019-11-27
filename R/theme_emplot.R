@@ -1,4 +1,4 @@
-#' Default space theme (light)
+#' Default emplot theme (light)
 #'
 #' Add to a ggplot2 plot object to apply.
 #'
@@ -9,7 +9,7 @@
 #' @return theme object
 #' @export
 #' @import ggplot2
-theme_space <- function(base_size = 12, grid = TRUE, serif = FALSE) {
+theme_emplot <- function(base_size = 12, grid = TRUE, serif = FALSE) {
     family <- ifelse(serif, "et-book", "lato")
     theme_bw(base_size = base_size) +
     theme(

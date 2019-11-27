@@ -13,5 +13,5 @@
     font_add("lato", regular = "Lato-Regular.ttf")
     showtext_auto()
 
-    theme_set(theme_space())
+    theme_set(theme_emplot())
 }
