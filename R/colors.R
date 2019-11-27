@@ -1,5 +1,5 @@
 black <- "#000000"
-gray <- "#808080"
+gray <- "#949494"
 white <- "#ffffff"
 
 bgcolor <- white
