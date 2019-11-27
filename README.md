@@ -52,7 +52,8 @@ ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
 
 <img src="man/figures/README-grid_off-1.svg" width="100%" />
 
-The font can be changed to a serif with the `serif` option:
+The font can be changed to a serif with the `serif` option (for the
+[Tufte](https://www.edwardtufte.com/tufte/) look):
 
 ``` r
 ggplot(iris, aes(Petal.Length)) +
@@ -63,3 +64,16 @@ ggplot(iris, aes(Petal.Length)) +
 ```
 
 <img src="man/figures/README-serif_on-1.svg" width="100%" />
+
+``` r
+library(tidyverse)
+mpg %>%
+    mutate(cyl = as.factor(cyl)) %>%
+    ggplot(aes(displ, hwy, color = cyl)) +
+        geom_point(size = 1.25) +
+        geom_smooth(method = lm, se = FALSE, size = 0.5) +
+        theme_emplot(grid = FALSE, serif = TRUE) +
+        scale_color_grey(end = 0.75)
+```
+
+<img src="man/figures/README-tufte_line-1.svg" width="100%" />
