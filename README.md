@@ -70,10 +70,22 @@ library(tidyverse)
 mpg %>%
     mutate(cyl = as.factor(cyl)) %>%
     ggplot(aes(displ, hwy, color = cyl)) +
-        geom_point(size = 1.25) +
-        geom_smooth(method = lm, se = FALSE, size = 0.5) +
+        geom_point() +
+        geom_smooth(method = lm, se = FALSE) +
         theme_emplot(grid = FALSE, serif = TRUE) +
         scale_color_grey(end = 0.75)
 ```
 
 <img src="man/figures/README-tufte_line-1.svg" width="100%" />
+
+You can also use `theme_emtufte` to reproduce the Tufte look
+out-of-the-box:
+
+``` r
+mtcars %>%
+    ggplot(aes(disp, hp)) +
+        geom_point() +
+        theme_emtufte()
+```
+
+<img src="man/figures/README-tufte_scatter-1.svg" width="100%" />
