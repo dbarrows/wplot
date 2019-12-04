@@ -2,7 +2,7 @@ black <- "#000000"
 gray <- "#949494"
 white <- "#ffffff"
 
-bgcolor <- white
+bgcolor <- "#fffff8"
 textcolor <- black
 gridcolor <- black
 tickcolor <- black
