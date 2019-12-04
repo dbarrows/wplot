@@ -9,7 +9,7 @@
 #' @return theme object
 #' @export
 #' @import ggplot2
-theme_emplot <- function(base_size = 10, grid = TRUE, serif = FALSE) {
+theme_emplot <- function(base_size = 9, grid = TRUE, serif = FALSE) {
     family <- ifelse(serif, "et-book", "lato")
     theme_bw(base_size = base_size) +
     theme(
