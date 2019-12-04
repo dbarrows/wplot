@@ -59,7 +59,7 @@ The font can be changed to a serif with the `serif` option (for the
 ggplot(iris, aes(Petal.Length)) +
     geom_histogram(bins = 30) +
     scale_y_continuous(breaks = seq(5, 25, by = 5)) +
-    geom_hline(yintercept = seq(5, 25, by = 5), col = "white", size = 1) +
+    geom_hline(yintercept = seq(5, 25, by = 5), col = "white") +
     theme_emplot(grid = FALSE, serif = TRUE)
 ```
 

@@ -2,6 +2,7 @@
 .onLoad <- function(libname, pkgname) {
     update_geom_defaults("line", list(color = default_color, size = line_size))
     update_geom_defaults("abline", list(color = default_color, size = line_size))
+    update_geom_defaults("hline", list(color = default_color, size = line_size))
     update_geom_defaults("smooth", list(color = default_color, size = line_size))
     update_geom_defaults("point", list(color = default_color, size = point_size))
     update_geom_defaults("area", list(fill = fill_color, color = bgcolor, size = line_size))
