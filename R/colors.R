@@ -1,6 +1,7 @@
 black <- "#000000"
 gray <- "#949494"
 white <- "#ffffff"
+bgtufte <- "#fffff8"
 
 bgcolor <- white
 textcolor <- black

@@ -31,18 +31,3 @@ theme_emplot <- function(base_size = 9, grid = TRUE, serif = FALSE) {
         strip.background = element_rect(fill = "transparent")
     )
 }
-
-#' Tufte emplot theme
-#'
-#' Simular to the default theme, but with Tufte-esque defaults.
-#'
-#' @param base_size base font size
-#' @param grid show grid lines
-#' @param serif use serif font
-#'
-#' @return theme object
-#' @export
-#' @import ggplot2
-theme_emtufte <- function(base_size = 10, grid = FALSE, serif = TRUE) {
-    theme_emplot(base_size, grid, serif)
-}
