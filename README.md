@@ -25,7 +25,9 @@ Possible CRAN version in the future.
 ``` r
 library(ggplot2)
 library(emplot)
+```
 
+``` r
 ggplot(mpg, aes(displ, hwy, color = class)) +
     geom_point()
 ```
@@ -44,10 +46,15 @@ ggplot(mpg, aes(displ)) +
 The grid can be forced on/off with the `grid` option:
 
 ``` r
-ggplot(iris, aes(Sepal.Length, Sepal.Width, color = Species)) +
-    geom_point() +
-    geom_smooth(method = lm, alpha = 0.25) +
-    theme_emplot(grid = FALSE)
+library(tidyverse)
+library(gapminder)
+as_tibble(gapminder) %>%
+    mutate(cc = I(country_colors[match(country, names(country_colors))])) %>%
+    filter(continent %in% c("Africa", "Europe") & year == 2007) %>%
+    ggplot(aes(log(gdpPercap), lifeExp, colour = cc, size = sqrt(pop/pi)/1500)) +
+        geom_point() +
+        theme_emplot(grid = FALSE) +
+        theme(legend.position = "none")
 ```
 
 <img src="man/figures/README-grid_off-1.svg" width="100%" />

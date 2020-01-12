@@ -26,7 +26,6 @@ theme_emplot <- function(base_size = 9, grid = TRUE, serif = FALSE) {
         panel.grid.major = element_line(colour = gridcolor, linetype = "dotted", size = ifelse(grid, 0.075, 0)),
         panel.background = element_rect(fill = "transparent"),
         plot.title = element_text(hjust = -0.2, vjust = 2, size = rel(1.2), color = textcolor),
-        plot.margin = margin(1, 1, 1, 1, "cm"),
         plot.background = element_rect(fill = bgcolor),
         strip.background = element_rect(fill = "transparent")
     )
