@@ -60,8 +60,8 @@ library(gapminder)
 as_tibble(gapminder) %>%
     mutate(cc = I(country_colors[match(country, names(country_colors))])) %>%
     filter(continent %in% c("Africa", "Europe") & year == 2007) %>%
-    ggplot(aes(log(gdpPercap), lifeExp, colour = cc, size = sqrt(pop/pi)/1500)) +
-        geom_point() +
+    ggplot(aes(log(gdpPercap), lifeExp)) +
+        geom_point(aes(colour = cc, size = sqrt(pop/pi)/1500)) +
         theme_emplot(grid = FALSE) +
         theme(legend.position = "none")
 ```
