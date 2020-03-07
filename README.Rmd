@@ -5,10 +5,11 @@ output: github_document
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
+require(svglite)
 knitr::opts_chunk$set(
     collapse = TRUE,
     comment = "#>",
-    dev = 'svglite',
+    dev = "svglite",
     fig.path = "man/figures/README-",
     fig.showtext = TRUE,
     fig.width = 7,

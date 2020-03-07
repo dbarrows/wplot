@@ -212,6 +212,13 @@
       "Repository": "CRAN",
       "Hash": "d970917c7a0ef3ef3d19e6fe49ab586c"
     },
+    "gdtools": {
+      "Package": "gdtools",
+      "Version": "0.2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ce9248b6e65e2282afb9e53abc6a83cc"
+    },
     "generics": {
       "Package": "generics",
       "Version": "0.0.2",
@@ -555,6 +562,13 @@
       "Repository": "CRAN",
       "Hash": "0759e6b6c0957edb1311028a49a35e76"
     },
+    "svglite": {
+      "Package": "svglite",
+      "Version": "1.2.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ed61a9516ba30e7ebe72855931007255"
+    },
     "sys": {
       "Package": "sys",
       "Version": "3.3",
@@ -568,6 +582,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "dcae252f838195aaae0c5ac1b27a7545"
+    },
+    "systemfonts": {
+      "Package": "systemfonts",
+      "Version": "0.1.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "95ee5991b25547f27d6ead41767362f4"
     },
     "tibble": {
       "Package": "tibble",

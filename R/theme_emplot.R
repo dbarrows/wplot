@@ -10,7 +10,12 @@
 #' @export
 #' @import ggplot2
 theme_emplot <- function(base_size = 9, grid = TRUE, serif = FALSE) {
-    family <- ifelse(serif, "et-book", "lato")
+    family <- if(serif) "et-book" else "lato"
+    major_grid <- if (grid) {
+        element_line(colour = gridcolor, linetype = "dotted", size = ifelse(grid, 0.075, 0))
+    } else {
+        element_blank()
+    }
     theme_bw(base_size = base_size) +
     theme(
         line = element_line(),
@@ -23,7 +28,7 @@ theme_emplot <- function(base_size = 9, grid = TRUE, serif = FALSE) {
         axis.ticks = element_blank(),
         legend.key = element_rect(fill = "transparent"),
         panel.grid = element_blank(),
-        panel.grid.major = element_line(colour = gridcolor, linetype = "dotted", size = ifelse(grid, 0.075, 0)),
+        panel.grid.major = major_grid,
         panel.background = element_rect(fill = "transparent"),
         plot.title = element_text(hjust = -0.2, vjust = 2, size = rel(1.2), color = textcolor),
         plot.background = element_rect(fill = bgcolor),
