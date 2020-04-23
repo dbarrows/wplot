@@ -81,6 +81,7 @@ mpg %>%
         geom_smooth(method = lm, se = FALSE) +
         theme_emplot(grid = FALSE, serif = TRUE) +
         scale_color_grey(end = 0.75)
+#> `geom_smooth()` using formula 'y ~ x'
 ```
 
 <img src="man/figures/README-tufte_line-1.svg" width="100%" />

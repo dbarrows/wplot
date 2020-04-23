@@ -10,7 +10,7 @@
 #' @export
 #' @import ggplot2
 theme_emplot <- function(base_size = 9, grid = TRUE, serif = FALSE) {
-    family <- if(serif) "et-book" else "lato"
+    family <- if(serif) "eb-garamond" else "lato"
     major_grid <- if (grid) {
         element_line(colour = gridcolor, linetype = "dotted", size = ifelse(grid, 0.075, 0))
     } else {
