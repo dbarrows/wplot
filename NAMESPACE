@@ -2,6 +2,7 @@
 
 export(load_fonts)
 export(theme_emplot)
+export(theme_emplotdark)
 export(theme_emtufte)
 import(ggplot2)
 import(showtext)

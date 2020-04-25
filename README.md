@@ -28,7 +28,7 @@ library(emplot)
 ```
 
 ``` r
-ggplot(mpg, aes(displ, hwy, color = class)) +
+ggplot(mpg, aes(displ, hwy, colour = class)) +
     geom_point()
 ```
 
@@ -76,11 +76,11 @@ ggplot(iris, aes(Petal.Length)) +
 library(tidyverse)
 mpg %>%
     mutate(cyl = as.factor(cyl)) %>%
-    ggplot(aes(displ, hwy, color = cyl)) +
+    ggplot(aes(displ, hwy, colour = cyl)) +
         geom_point() +
         geom_smooth(method = lm, se = FALSE) +
         theme_emplot(grid = FALSE, serif = TRUE) +
-        scale_color_grey(end = 0.75)
+        scale_colour_grey(end = 0.75)
 #> `geom_smooth()` using formula 'y ~ x'
 ```
 
@@ -97,3 +97,14 @@ mtcars %>%
 ```
 
 <img src="man/figures/README-tufte_scatter-1.svg" width="100%" />
+
+There is also a dark theme:
+
+``` r
+ggplot(mpg, aes(displ, hwy, colour = class)) +
+    geom_point() +
+    theme_emplotdark() +
+    theme(plot.margin = margin(0.75, 0.75, 0.5, 0.5, "cm"))
+```
+
+<img src="man/figures/README-scatter-dark-1.svg" width="100%" />

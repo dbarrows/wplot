@@ -41,8 +41,9 @@ Possible CRAN version in the future.
 library(ggplot2)
 library(emplot)
 ```
+
 ```{r scatter}
-ggplot(mpg, aes(displ, hwy, color = class)) +
+ggplot(mpg, aes(displ, hwy, colour = class)) +
     geom_point()
 ```
 
@@ -55,7 +56,7 @@ ggplot(mpg, aes(displ)) +
 
 The grid can be forced on/off with the `grid` option:
 
-```{r grid_off}
+```{r grid_off, message  = FALSE}
 library(tidyverse)
 library(gapminder)
 as_tibble(gapminder) %>%
@@ -81,11 +82,11 @@ ggplot(iris, aes(Petal.Length)) +
 library(tidyverse)
 mpg %>%
     mutate(cyl = as.factor(cyl)) %>%
-    ggplot(aes(displ, hwy, color = cyl)) +
+    ggplot(aes(displ, hwy, colour = cyl)) +
         geom_point() +
         geom_smooth(method = lm, se = FALSE) +
         theme_emplot(grid = FALSE, serif = TRUE) +
-        scale_color_grey(end = 0.75)
+        scale_colour_grey(end = 0.75)
 ```
 
 You can also use `theme_emtufte` to reproduce the Tufte look out-of-the-box:
@@ -95,4 +96,13 @@ mtcars %>%
     ggplot(aes(disp, hp)) +
         geom_point() +
         theme_emtufte()
+```
+
+There is also a dark theme:
+
+```{r scatter-dark}
+ggplot(mpg, aes(displ, hwy, colour = class)) +
+    geom_point() +
+    theme_emplotdark() +
+    theme(plot.margin = margin(0.75, 0.75, 0.5, 0.5, "cm"))
 ```
