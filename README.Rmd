@@ -40,6 +40,7 @@ Possible CRAN version in the future.
 ```{r libraries}
 library(ggplot2)
 library(emplot)
+theme_set(theme_emplot())
 ```
 
 ```{r scatter}

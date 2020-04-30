@@ -1,9 +1,9 @@
 black <- "#000000"
 light_gray <- "#e0e0e0"
 gray <- "#949494"
-mid_gray <- "#606060"
-dark_gray <- "#383838"
-darkest_gray <- "#181818"
+mid_gray <- "#707a8c"
+dark_gray <- "#262124"
+darkest_gray <- "#1b1b1b"
 white <- "#ffffff"
 bgtufte <- "#fffff8"
 

@@ -25,6 +25,7 @@ Possible CRAN version in the future.
 ``` r
 library(ggplot2)
 library(emplot)
+theme_set(theme_emplot())
 ```
 
 ``` r
