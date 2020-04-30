@@ -15,6 +15,7 @@ update_all_geom_defaults <- function(dark = FALSE) {
     update_geom_defaults("area", list(fill = fill_colour, colour = "transparent", size = line_size))
     update_geom_defaults("density", list(fill = fill_colour, colour = "transparent", size = line_size))
     update_geom_defaults("ribbon", list(fill = fill_colour, colour = "transparent", alpha = 0.1))
+    update_geom_defaults("smooth", list(fill = fill_colour, colour = default_colour, alpha = 0.1))
     update_geom_defaults("bar", list(fill = fill_colour, size = 0.5, colour = background_colour))
     update_geom_defaults("col", list(fill = fill_colour, size = 0.5, colour = background_colour))
     invisible()

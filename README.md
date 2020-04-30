@@ -102,10 +102,12 @@ mtcars %>%
 There is also a dark theme:
 
 ``` r
+library(colorblindr)
 ggplot(mpg, aes(displ, hwy, colour = class)) +
     geom_point() +
     theme_emplotdark() +
-    theme(plot.margin = margin(0.75, 0.75, 0.5, 0.5, "cm"))
+    scale_colour_OkabeIto() +
+    theme(plot.margin = margin(1, 1, 1, 1, "cm"))
 ```
 
 <img src="man/figures/README-scatter-dark-1.svg" width="100%" />
