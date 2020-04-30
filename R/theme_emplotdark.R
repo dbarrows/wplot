@@ -10,7 +10,7 @@
 #' @import ggplot2
 theme_emplotdark <- function(base_size = 9, grid = TRUE) {
     family <- "lato"
-    grid_colour <- med_gray
+    grid_colour <- dark_gray
     text_colour <- light_gray
     tick_colour <- light_gray
     background_colour <- darkest_gray
