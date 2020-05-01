@@ -25,6 +25,7 @@ Possible CRAN version in the future.
 ``` r
 library(ggplot2)
 library(mplot)
+
 theme_set(theme_m())
 ```
 
@@ -50,6 +51,7 @@ be a made `serif`:
 ``` r
 library(tidyverse)
 library(gapminder)
+
 gapminder %>%
     mutate(cc = I(country_colors[match(country, names(country_colors))])) %>%
     filter(continent %in% c("Africa", "Europe") & year == 2007) %>%
@@ -67,6 +69,7 @@ There is also a dark theme, `theme_md`:
 
 ``` r
 library(colorblindr)
+
 ggplot(mpg, aes(displ, hwy, colour = class)) +
     geom_point() +
     theme_md() +
@@ -120,6 +123,7 @@ You can use `theme_mt` to reproduce the
 
 ``` r
 library(MASS)
+
 Boston %>%
     ggplot(aes(ptratio, tax)) +
         geom_point() +

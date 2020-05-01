@@ -6,6 +6,7 @@ output: github_document
 
 ```{r, include = FALSE}
 require(svglite)
+set.seed(42)
 knitr::opts_chunk$set(
     collapse = TRUE,
     comment = "#>",
@@ -41,6 +42,7 @@ Possible CRAN version in the future.
 ```{r libraries}
 library(ggplot2)
 library(mplot)
+
 theme_set(theme_m())
 ```
 
@@ -61,6 +63,7 @@ The grid can be turned on/off with the `grid` option, and the font can be a made
 ```{r grid_off, message  = FALSE}
 library(tidyverse)
 library(gapminder)
+
 gapminder %>%
     mutate(cc = I(country_colors[match(country, names(country_colors))])) %>%
     filter(continent %in% c("Africa", "Europe") & year == 2007) %>%
@@ -76,6 +79,7 @@ There is also a dark theme, `theme_md`:
 
 ```{r scatter-dark}
 library(colorblindr)
+
 ggplot(mpg, aes(displ, hwy, colour = class)) +
     geom_point() +
     theme_md() +
@@ -119,6 +123,7 @@ You can use `theme_mt` to reproduce the [Tufte](https://www.edwardtufte.com/tuft
 
 ```{r tufte_scatter}
 library(MASS)
+
 Boston %>%
     ggplot(aes(ptratio, tax)) +
         geom_point() +
