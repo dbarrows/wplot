@@ -109,3 +109,21 @@ ggplot(mpg, aes(displ, hwy, colour = class)) +
     scale_colour_OkabeIto() +
     theme(plot.margin = margin(1, 1, 1, 1, "cm"))
 ```
+
+```{r histogram-dark, message = FALSE}
+iris %>%
+    ggplot(aes(Sepal.Width)) +
+        geom_histogram() +
+        theme_emplotdark() +
+        theme(plot.margin = margin(1, 1, 1, 1, "cm"))
+```
+
+```{r math-dark, message = FALSE}
+tibble(x = seq(0, 100, length.out = 50),
+       y = sqrt(x) + rnorm(length(x))) %>%
+    ggplot(aes(x, y)) +
+        geom_point() + 
+        geom_smooth() +
+        theme_emplotdark() +
+        theme(plot.margin = margin(1, 1, 1, 1, "cm"))
+```

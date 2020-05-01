@@ -111,3 +111,25 @@ ggplot(mpg, aes(displ, hwy, colour = class)) +
 ```
 
 <img src="man/figures/README-scatter-dark-1.svg" width="100%" />
+
+``` r
+iris %>%
+    ggplot(aes(Sepal.Width)) +
+        geom_histogram() +
+        theme_emplotdark() +
+        theme(plot.margin = margin(1, 1, 1, 1, "cm"))
+```
+
+<img src="man/figures/README-histogram-dark-1.svg" width="100%" />
+
+``` r
+tibble(x = seq(0, 100, length.out = 50),
+       y = sqrt(x) + rnorm(length(x))) %>%
+    ggplot(aes(x, y)) +
+        geom_point() + 
+        geom_smooth() +
+        theme_emplotdark() +
+        theme(plot.margin = margin(1, 1, 1, 1, "cm"))
+```
+
+<img src="man/figures/README-math-dark-1.svg" width="100%" />
