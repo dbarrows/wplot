@@ -7,7 +7,6 @@
 #'
 #' @return theme object
 #' @export
-#' @import ggplot2
 theme_md <- function(base_size = 9, grid = TRUE) {
     family <- "lato"
     grid_colour <- dark_gray

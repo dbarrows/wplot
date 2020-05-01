@@ -8,7 +8,6 @@
 #'
 #' @return theme object
 #' @export
-#' @import ggplot2
 theme_m <- function(base_size = 9, grid = TRUE, serif = FALSE) {
     update_all_geom_defaults()
     family <- if(serif) "eb-garamond" else "lato"

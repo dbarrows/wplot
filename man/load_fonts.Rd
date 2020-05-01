@@ -2,10 +2,10 @@
 % Please edit documentation in R/fonts.R
 \name{load_fonts}
 \alias{load_fonts}
-\title{Load emplot fonts}
+\title{Load mplot fonts}
 \usage{
 load_fonts()
 }
 \description{
-Load emplot fonts
+Load mplot fonts
 }

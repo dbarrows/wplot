@@ -8,7 +8,6 @@
 #'
 #' @return theme object
 #' @export
-#' @import ggplot2
 theme_mt <- function(base_size = 10, grid = FALSE, serif = TRUE) {
     th <- theme_mc()
     th$plot.background$fill <- bgtufte

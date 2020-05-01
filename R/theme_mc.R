@@ -8,7 +8,6 @@
 #'
 #' @return theme object
 #' @export
-#' @import ggplot2
 theme_mc <- function(base_size = 10, grid = FALSE, serif = TRUE) {
     th <- theme_m(base_size, grid, serif)
     update_all_geom_defaults(classic = TRUE)
