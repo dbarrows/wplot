@@ -1,5 +1,5 @@
-Package: emplot
-Title: Emplot
+Package: mplot
+Title: mplot
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "Dexter",

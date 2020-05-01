@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Emplot
+# mplot
 
 <!-- badges: start -->
 
@@ -15,7 +15,7 @@ Install from [GitHub](https://github.com/) using the
 [devtools](https://cran.r-project.org/web/packages/devtools) package:
 
 ``` r
-devtools::install_github("dbarrows/emplot")
+devtools::install_github("dbarrows/mplot")
 ```
 
 Possible CRAN version in the future.
@@ -24,8 +24,8 @@ Possible CRAN version in the future.
 
 ``` r
 library(ggplot2)
-library(emplot)
-theme_set(theme_emplot())
+library(mplot)
+theme_set(theme_m())
 ```
 
 ``` r
@@ -44,68 +44,32 @@ ggplot(mpg, aes(displ)) +
 
 ## Options
 
-The grid can be forced on/off with the `grid` option:
+The grid can be turned on/off with the `grid` option, and the font can
+be a made `serif`:
 
 ``` r
 library(tidyverse)
 library(gapminder)
-as_tibble(gapminder) %>%
+gapminder %>%
     mutate(cc = I(country_colors[match(country, names(country_colors))])) %>%
     filter(continent %in% c("Africa", "Europe") & year == 2007) %>%
     ggplot(aes(log(gdpPercap), lifeExp)) +
         geom_point(aes(colour = cc, size = sqrt(pop/pi)/1500)) +
-        theme_emplot(grid = FALSE) +
+        theme_m(grid = FALSE, serif = TRUE) +
         theme(legend.position = "none")
 ```
 
 <img src="man/figures/README-grid_off-1.svg" width="100%" />
 
-The font can be changed to a serif with the `serif` option (for the
-[Tufte](https://www.edwardtufte.com/tufte/) look):
+## Dark
 
-``` r
-ggplot(iris, aes(Petal.Length)) +
-    geom_histogram(bins = 30) +
-    scale_y_continuous(breaks = seq(5, 25, by = 5)) +
-    geom_hline(yintercept = seq(5, 25, by = 5), col = "white") +
-    theme_emplot(grid = FALSE, serif = TRUE)
-```
-
-<img src="man/figures/README-serif_on-1.svg" width="100%" />
-
-``` r
-library(tidyverse)
-mpg %>%
-    mutate(cyl = as.factor(cyl)) %>%
-    ggplot(aes(displ, hwy, colour = cyl)) +
-        geom_point() +
-        geom_smooth(method = lm, se = FALSE) +
-        theme_emplot(grid = FALSE, serif = TRUE) +
-        scale_colour_grey(end = 0.75)
-#> `geom_smooth()` using formula 'y ~ x'
-```
-
-<img src="man/figures/README-tufte_line-1.svg" width="100%" />
-
-You can also use `theme_emtufte` to reproduce the Tufte look
-out-of-the-box:
-
-``` r
-mtcars %>%
-    ggplot(aes(disp, hp)) +
-        geom_point() +
-        theme_emtufte()
-```
-
-<img src="man/figures/README-tufte_scatter-1.svg" width="100%" />
-
-There is also a dark theme:
+There is also a dark theme, `theme_md`:
 
 ``` r
 library(colorblindr)
 ggplot(mpg, aes(displ, hwy, colour = class)) +
     geom_point() +
-    theme_emplotdark() +
+    theme_md() +
     scale_colour_OkabeIto() +
     theme(plot.margin = margin(1, 1, 1, 1, "cm"))
 ```
@@ -116,7 +80,7 @@ ggplot(mpg, aes(displ, hwy, colour = class)) +
 iris %>%
     ggplot(aes(Sepal.Width)) +
         geom_histogram() +
-        theme_emplotdark() +
+        theme_md() +
         theme(plot.margin = margin(1, 1, 1, 1, "cm"))
 ```
 
@@ -128,8 +92,58 @@ tibble(x = seq(0, 100, length.out = 50),
     ggplot(aes(x, y)) +
         geom_point() + 
         geom_smooth() +
-        theme_emplotdark() +
+        theme_md() +
         theme(plot.margin = margin(1, 1, 1, 1, "cm"))
 ```
 
 <img src="man/figures/README-math-dark-1.svg" width="100%" />
+
+## Classic
+
+For a slightly larger serif font, smaller points, and no grid, use
+`theme_mc`:
+
+``` r
+mpg %>%
+    ggplot(aes(displ, cty)) +
+    geom_point() +
+    geom_smooth() +
+    theme_mc()
+```
+
+<img src="man/figures/README-classic_scatter-1.svg" width="100%" />
+
+## Tufte
+
+You can use `theme_mt` to reproduce the
+[Tufte](https://www.edwardtufte.com/tufte/) look:
+
+``` r
+library(MASS)
+Boston %>%
+    ggplot(aes(ptratio, tax)) +
+        geom_point() +
+        geom_rug() +
+        theme_mt()
+```
+
+<img src="man/figures/README-tufte_scatter-1.svg" width="100%" />
+
+``` r
+h <- Boston %>%
+    pull(tax) %>%
+    hist(plot = FALSE)
+df <- h %>%
+    with(tibble(tax = mids, count = counts))
+ybreaks <- seq(20, max(df$count), by = 20)
+df %>%
+    ggplot(aes(tax, count)) +
+        geom_col(orientation = "x", width = diff(h$breaks[1:2])/2) +
+        scale_y_continuous(breaks = ybreaks) +
+        theme_mt() +
+        geom_hline(size = 0.75,
+                   yintercept = ybreaks,
+                   col = theme_mt()$plot.background$fill)
+```
+
+<img src="man/figures/README-tufte_hist-1.svg" width="100%" />

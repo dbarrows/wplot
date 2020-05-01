@@ -1,4 +1,4 @@
-#' Default emplot theme (light)
+#' Default mplot theme (light)
 #'
 #' Add to a ggplot2 plot object to apply.
 #'
@@ -9,7 +9,7 @@
 #' @return theme object
 #' @export
 #' @import ggplot2
-theme_emplot <- function(base_size = 9, grid = TRUE, serif = FALSE) {
+theme_m <- function(base_size = 9, grid = TRUE, serif = FALSE) {
     update_all_geom_defaults()
     family <- if(serif) "eb-garamond" else "lato"
     major_grid <- if (grid) {

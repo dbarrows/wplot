@@ -1,4 +1,4 @@
-#' Emplot dark theme
+#' mplot dark theme
 #'
 #' Add to a ggplot2 plot object to apply.
 #'
@@ -8,7 +8,7 @@
 #' @return theme object
 #' @export
 #' @import ggplot2
-theme_emplotdark <- function(base_size = 9, grid = TRUE) {
+theme_md <- function(base_size = 9, grid = TRUE) {
     family <- "lato"
     grid_colour <- dark_gray
     text_colour <- light_gray
