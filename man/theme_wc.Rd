@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_wc.R
 \name{theme_wc}
 \alias{theme_wc}
-\title{wplot classic theme}
+\title{Classic theme}
 \usage{
 theme_wc(base_size = 10, grid = FALSE, serif = TRUE)
 }
@@ -14,7 +14,7 @@ theme_wc(base_size = 10, grid = FALSE, serif = TRUE)
 \item{serif}{use serif font}
 }
 \value{
-theme object
+\code{\link{theme}} object
 }
 \description{
 Similar to the default theme, but with larger serif font and no gridlines.

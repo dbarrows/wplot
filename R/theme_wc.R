@@ -1,4 +1,4 @@
-#' wplot classic theme
+#' Classic theme
 #'
 #' Similar to the default theme, but with larger serif font and no gridlines.
 #'
@@ -6,10 +6,10 @@
 #' @param grid show grid lines
 #' @param serif use serif font
 #'
-#' @return theme object
+#' @return [`ggplot2::theme`] object
 #' @export
 theme_wc <- function(base_size = 10, grid = FALSE, serif = TRUE) {
-    th <- theme_w(base_size, grid, serif)
+    th <- theme_wl(base_size, grid, serif)
     update_all_geom_defaults(classic = TRUE)
     th
 }

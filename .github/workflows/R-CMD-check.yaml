@@ -1,0 +1,22 @@
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+name: R-CMD-check
+
+jobs:
+  R-CMD-check:
+    runs-on: ubuntu-latest
+    container: dbarrows/spur-image
+    steps:
+      - uses: actions/checkout@master
+      - name: Install dependencies
+        run: remotes::install_deps(dependencies = TRUE)
+        shell: Rscript --vanilla {0}
+      - name: Check
+        run: rcmdcheck::rcmdcheck(args = "--no-manual", error_on = "error")
+        shell: Rscript --vanilla {0}

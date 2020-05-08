@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_wt.R
 \name{theme_wt}
 \alias{theme_wt}
-\title{wplot Tufte theme}
+\title{Tufte theme}
 \usage{
 theme_wt(base_size = 10, grid = FALSE, serif = TRUE)
 }
@@ -14,7 +14,7 @@ theme_wt(base_size = 10, grid = FALSE, serif = TRUE)
 \item{serif}{use serif font}
 }
 \value{
-theme object
+\code{\link[ggplot2:theme]{ggplot2::theme}} object
 }
 \description{
 Similar to the default theme, but with Tufte-esque defaults.

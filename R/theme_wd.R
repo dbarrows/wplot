@@ -1,11 +1,11 @@
-#' wplot dark theme
+#' Dark theme
 #'
 #' Add to a ggplot2 plot object to apply.
 #'
 #' @param base_size base font size
 #' @param grid show grid lines
 #'
-#' @return theme object
+#' @return [`ggplot2::theme`] object
 #' @export
 theme_wd <- function(base_size = 9, grid = TRUE) {
     family <- "lato"

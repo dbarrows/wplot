@@ -2,7 +2,7 @@
 % Please edit documentation in R/theme_wd.R
 \name{theme_wd}
 \alias{theme_wd}
-\title{wplot dark theme}
+\title{Dark theme}
 \usage{
 theme_wd(base_size = 9, grid = TRUE)
 }
@@ -12,7 +12,7 @@ theme_wd(base_size = 9, grid = TRUE)
 \item{grid}{show grid lines}
 }
 \value{
-theme object
+\code{\link[ggplot2:theme]{ggplot2::theme}} object
 }
 \description{
 Add to a ggplot2 plot object to apply.

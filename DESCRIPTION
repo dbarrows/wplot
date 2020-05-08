@@ -8,9 +8,12 @@ Authors@R:
            email = "dexter@barrows.io",
            comment = c(ORCID = "0000-0001-8169-8938"))
 Description: A clean ggplot theme and matching geom defaults.
+URL: https://github.com/dbarrows/wplot
+BugReports: https://github.com/dbarrows/wplot/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.0
 Imports: 
     ggplot2,

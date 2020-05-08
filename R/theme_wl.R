@@ -1,4 +1,4 @@
-#' Default wplot theme (light)
+#' Light theme
 #'
 #' Add to a ggplot2 plot object to apply.
 #'
@@ -6,9 +6,9 @@
 #' @param grid show grid lines
 #' @param serif use serif font
 #'
-#' @return theme object
+#' @return [`ggplot2::theme`] object
 #' @export
-theme_w <- function(base_size = 9, grid = TRUE, serif = FALSE) {
+theme_wl <- function(base_size = 9, grid = TRUE, serif = FALSE) {
     update_all_geom_defaults()
     family <- if(serif) "eb-garamond" else "lato"
     major_grid <- if (grid) {

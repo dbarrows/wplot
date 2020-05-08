@@ -1,0 +1,19 @@
+url: https://github.com/dbarrows/wplot
+
+template:
+    params:
+        bootswatch: flatly
+
+navbar:
+    structure:
+        left:  [github, reference]
+    components:
+        home: ~
+
+reference:
+- title: "Themes"
+- contents:
+    - starts_with("theme_")
+- title: "Fonts"
+- contents:
+    - load_fonts
