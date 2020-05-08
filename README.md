@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# mplot
+# wplot
 
 <!-- badges: start -->
 
@@ -15,7 +15,7 @@ Install from [GitHub](https://github.com/) using the
 [devtools](https://cran.r-project.org/web/packages/devtools) package:
 
 ``` r
-devtools::install_github("dbarrows/mplot")
+devtools::install_github("dbarrows/wplot")
 ```
 
 Possible CRAN version in the future.
@@ -24,9 +24,9 @@ Possible CRAN version in the future.
 
 ``` r
 library(ggplot2)
-library(mplot)
+library(wplot)
 
-theme_set(theme_m())
+theme_set(theme_w())
 ```
 
 ``` r
@@ -57,7 +57,7 @@ gapminder %>%
     filter(continent %in% c("Africa", "Europe") & year == 2007) %>%
     ggplot(aes(log(gdpPercap), lifeExp)) +
         geom_point(aes(colour = cc, size = sqrt(pop/pi)/1500)) +
-        theme_m(grid = FALSE, serif = TRUE) +
+        theme_w(grid = FALSE, serif = TRUE) +
         theme(legend.position = "none")
 ```
 
@@ -65,14 +65,14 @@ gapminder %>%
 
 ## Dark
 
-There is also a dark theme, `theme_md`:
+There is also a dark theme, `theme_wd`:
 
 ``` r
 library(colorblindr)
 
 ggplot(mpg, aes(displ, hwy, colour = class)) +
     geom_point() +
-    theme_md() +
+    theme_wd() +
     scale_colour_OkabeIto() +
     theme(plot.margin = margin(1, 1, 1, 1, "cm"))
 ```
@@ -83,7 +83,7 @@ ggplot(mpg, aes(displ, hwy, colour = class)) +
 iris %>%
     ggplot(aes(Sepal.Width)) +
         geom_histogram() +
-        theme_md() +
+        theme_wd() +
         theme(plot.margin = margin(1, 1, 1, 1, "cm"))
 ```
 
@@ -95,7 +95,7 @@ tibble(x = seq(0, 100, length.out = 50),
     ggplot(aes(x, y)) +
         geom_point() + 
         geom_smooth() +
-        theme_md() +
+        theme_wd() +
         theme(plot.margin = margin(1, 1, 1, 1, "cm"))
 ```
 
@@ -104,21 +104,21 @@ tibble(x = seq(0, 100, length.out = 50),
 ## Classic
 
 For a slightly larger serif font, smaller points, and no grid, use
-`theme_mc`:
+`theme_wc`:
 
 ``` r
 mpg %>%
     ggplot(aes(displ, cty)) +
     geom_point() +
     geom_smooth() +
-    theme_mc()
+    theme_wc()
 ```
 
 <img src="man/figures/README-classic_scatter-1.svg" width="100%" />
 
 ## Tufte
 
-You can use `theme_mt` to reproduce the
+You can use `theme_wt` to reproduce the
 [Tufte](https://www.edwardtufte.com/tufte/) look:
 
 ``` r
@@ -128,7 +128,7 @@ Boston %>%
     ggplot(aes(ptratio, tax)) +
         geom_point() +
         geom_rug() +
-        theme_mt()
+        theme_wt()
 ```
 
 <img src="man/figures/README-tufte_scatter-1.svg" width="100%" />
@@ -144,10 +144,10 @@ df %>%
     ggplot(aes(tax, count)) +
         geom_col(orientation = "x", width = diff(h$breaks[1:2])/2) +
         scale_y_continuous(breaks = ybreaks) +
-        theme_mt() +
+        theme_wt() +
         geom_hline(size = 0.75,
                    yintercept = ybreaks,
-                   col = theme_mt()$plot.background$fill)
+                   col = theme_wt()$plot.background$fill)
 ```
 
 <img src="man/figures/README-tufte_hist-1.svg" width="100%" />

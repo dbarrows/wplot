@@ -1,8 +1,8 @@
-#' \code{mplot} package
+#' \code{wplot} package
 #'
 #' A clean ggplot theme and matching geom defaults
 #'
 #' @docType package
-#' @name mplot
+#' @name wplot
 #' @import ggplot2 sysfonts showtext
 NULL

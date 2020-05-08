@@ -1,4 +1,4 @@
-#' mplot Tufte theme
+#' wplot Tufte theme
 #'
 #' Similar to the default theme, but with Tufte-esque defaults.
 #'
@@ -8,8 +8,8 @@
 #'
 #' @return theme object
 #' @export
-theme_mt <- function(base_size = 10, grid = FALSE, serif = TRUE) {
-    th <- theme_mc()
+theme_wt <- function(base_size = 10, grid = FALSE, serif = TRUE) {
+    th <- theme_wc()
     th$plot.background$fill <- bgtufte
     th
 }

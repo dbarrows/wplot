@@ -1,4 +1,4 @@
-#' mplot classic theme
+#' wplot classic theme
 #'
 #' Similar to the default theme, but with larger serif font and no gridlines.
 #'
@@ -8,8 +8,8 @@
 #'
 #' @return theme object
 #' @export
-theme_mc <- function(base_size = 10, grid = FALSE, serif = TRUE) {
-    th <- theme_m(base_size, grid, serif)
+theme_wc <- function(base_size = 10, grid = FALSE, serif = TRUE) {
+    th <- theme_w(base_size, grid, serif)
     update_all_geom_defaults(classic = TRUE)
     th
 }

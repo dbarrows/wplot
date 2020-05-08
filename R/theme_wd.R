@@ -1,4 +1,4 @@
-#' mplot dark theme
+#' wplot dark theme
 #'
 #' Add to a ggplot2 plot object to apply.
 #'
@@ -7,7 +7,7 @@
 #'
 #' @return theme object
 #' @export
-theme_md <- function(base_size = 9, grid = TRUE) {
+theme_wd <- function(base_size = 9, grid = TRUE) {
     family <- "lato"
     grid_colour <- dark_gray
     text_colour <- light_gray
