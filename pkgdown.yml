@@ -2,7 +2,7 @@ pandoc: '2.5'
 pkgdown: 1.5.1
 pkgdown_sha: ~
 articles: []
-last_built: 2020-05-08T18:10Z
+last_built: 2020-05-08T18:13Z
 urls:
   reference: https://github.com/dbarrows/wplot/reference
   article: https://github.com/dbarrows/wplot/articles
