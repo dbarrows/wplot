@@ -17,5 +17,5 @@ theme_wt(base_size = 10, grid = FALSE, serif = TRUE)
 \code{\link[ggplot2:theme]{ggplot2::theme}} object
 }
 \description{
-Similar to the default theme, but with Tufte-esque defaults.
+Similar to the default theme, but with \href{https://www.edwardtufte.com/tufte/}{Tufte}-esque defaults.
 }

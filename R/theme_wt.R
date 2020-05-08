@@ -1,6 +1,6 @@
 #' Tufte theme
 #'
-#' Similar to the default theme, but with Tufte-esque defaults.
+#' Similar to the default theme, but with [Tufte](https://www.edwardtufte.com/tufte/)-esque defaults.
 #'
 #' @param base_size base font size
 #' @param grid show grid lines
