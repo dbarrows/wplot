@@ -3,7 +3,7 @@
 \docType{package}
 \name{wplot}
 \alias{wplot}
-\title{\code{wplot} package}
+\title{\link{wplot} package}
 \description{
-A clean ggplot theme and matching geom defaults
+A clean \link{ggplot2} theme and matching geom defaults
 }

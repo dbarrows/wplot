@@ -2,10 +2,10 @@
 % Please edit documentation in R/fonts.R
 \name{load_fonts}
 \alias{load_fonts}
-\title{Load wplot fonts}
+\title{Load \link{wplot} fonts}
 \usage{
 load_fonts()
 }
 \description{
-Load wplot fonts
+Load \link{wplot} fonts
 }

@@ -14,7 +14,7 @@ theme_wc(base_size = 10, grid = FALSE, serif = TRUE)
 \item{serif}{use serif font}
 }
 \value{
-\code{\link{theme}} object
+\code{\link[ggplot2:theme]{ggplot2::theme}} object
 }
 \description{
 Similar to the default theme, but with larger serif font and no gridlines.

@@ -1,4 +1,4 @@
-#' Load wplot fonts
+#' Load [wplot] fonts
 #'
 #' @export
 load_fonts <- function() {
