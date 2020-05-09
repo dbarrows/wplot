@@ -3,17 +3,23 @@
 body {
     color: #000000;
 }
+body > .container .row {
+    padding-top: 4em;
+}
+#pkgdown-sidebar {
+
+}
 
 h1 {
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-size: 24pt;
+    font-size: 17pt;
     line-height: 1.5em;
     margin-bottom: 1em;
 }
 h1 > a > code {
-    font-size: 24pt;
+    font-size: 17pt;
     line-height: 1.5em;
     margin-bottom: 1em;
 }
@@ -25,9 +31,9 @@ h2 {
     font-family: 'EB Garamond', serif;
     font-weight: 600;
     font-style: italic;
-    font-size: 17pt;
+    font-size: 16pt;
 }
-h3 {
+h3, #pkgdown-sidebar h2 {
     font-family: 'EB Garamond', serif;
     font-weight: 600;
     font-style: italic;
@@ -37,7 +43,7 @@ body {
     font-family: 'EB Garamond', serif;
 }
 p {
-    font-size: 13pt;
+    font-size: 14pt;
 }
 
 code, pre {
@@ -56,6 +62,17 @@ pre {
     background-color: #f0f0f0;
     border-radius: 0px;
     border-width: 0px;
+}
+
+.navbar-default .navbar-toggle {
+    color: #000000;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #f0f0f0;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #000000;
 }
 
 table {
@@ -110,7 +127,6 @@ code > a {
     background: #f0f0f0;
     color: #101010;
     margin-left: 5px;
-    margin-right: 4px;
     border-radius: 0px;
 }
 
@@ -121,8 +137,8 @@ code > a {
 }
 .nav>li>a {
     padding-top: 17px;
-    padding-left: 0px;
-    padding-right: 12px;
+    padding-left: 15px;
+    padding-right: 0px;
 }
 
 .navbar-default .navbar-nav>.active>a,
