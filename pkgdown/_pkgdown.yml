@@ -6,9 +6,7 @@ template:
 
 navbar:
     structure:
-        left:  [github, reference]
-    components:
-        home: ~
+        right: [reference, home, github]
 
 reference:
 - title: "Themes"
