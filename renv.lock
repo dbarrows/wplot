@@ -653,10 +653,10 @@
     },
     "showtext": {
       "Package": "showtext",
-      "Version": "0.7-1",
+      "Version": "0.8",
       "Source": "Repository",
       "Repository": "CRAN",
-      "Hash": "5108601787f5fe0a41feecf8cdb04387"
+      "Hash": "8fd6ed41b06cff243d8c6cb0bf441ebd"
     },
     "showtextdb": {
       "Package": "showtextdb",
