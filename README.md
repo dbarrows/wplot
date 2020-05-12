@@ -8,8 +8,6 @@
 [![R build
 status](https://github.com/dbarrows/wplot/workflows/R-CMD-check/badge.svg)](https://github.com/dbarrows/wplot/actions)
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Lifecycle:
 maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 <!-- badges: end -->
 
