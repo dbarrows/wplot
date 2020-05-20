@@ -4,3 +4,6 @@
 ^README\.Rmd$
 ^README\.html$
 ^makefile$
+^\.github$
+^pkgdown$
+^docs$

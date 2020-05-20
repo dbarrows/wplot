@@ -13,6 +13,7 @@ update_all_geom_defaults <- function(dark = FALSE, classic = FALSE) {
     update_geom_defaults("line", list(colour = default_colour, size = line_size))
     update_geom_defaults("abline", list(colour = default_colour, size = line_size))
     update_geom_defaults("hline", list(colour = default_colour, size = line_size))
+    update_geom_defaults("vline", list(colour = default_colour, size = line_size))
     update_geom_defaults("smooth", list(colour = default_colour, size = line_size))
     update_geom_defaults("point", list(colour = default_colour, size = point_size))
     update_geom_defaults("area", list(fill = fill_colour, colour = "transparent", size = line_size))
