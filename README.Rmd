@@ -7,7 +7,7 @@ output: github_document
 ```{r, include = FALSE}
 require(svglite)
 require(showtext)
-set.seed(125)
+set.seed(126)
 knitr::opts_chunk$set(
     collapse = TRUE,
     comment = "#>",
