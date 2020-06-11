@@ -73,8 +73,8 @@ ggplot(mpg, aes(displ)) +
 The grid can be turned on/off with the `grid` option, and the font can be a made `serif`:
 
 ```{r grid_off, message  = FALSE}
-library(tidyverse)
 library(gapminder)
+library(dplyr)
 
 gapminder %>%
     mutate(cc = I(country_colors[match(country, names(country_colors))])) %>%
