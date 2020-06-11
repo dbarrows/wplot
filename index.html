@@ -117,12 +117,9 @@
 <div id="dark-theme" class="section level3">
 <h3 class="hasAnchor">
 <a href="#dark-theme" class="anchor"></a>Dark theme</h3>
-<div class="sourceCode" id="cb7"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">colorblindr</span>)
-
-<span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="no">displ</span>, <span class="no">hwy</span>, <span class="kw">colour</span> <span class="kw">=</span> <span class="no">class</span>)) +
+<div class="sourceCode" id="cb7"><pre class="r"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="no">displ</span>, <span class="no">hwy</span>, <span class="kw">colour</span> <span class="kw">=</span> <span class="no">class</span>)) +
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span>() +
     <span class="fu"><a href="reference/theme_wd.html">theme_wd</a></span>() +
-    <span class="fu">scale_colour_OkabeIto</span>() +
     <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span>(<span class="kw">plot.margin</span> <span class="kw">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">margin</a></span>(<span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="st">"cm"</span>))</pre></div>
 <p><img src="reference/figures/README-scatter-dark-1.svg" width="100%"></p>
 <div class="sourceCode" id="cb8"><pre class="r"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span>(<span class="no">mpg</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span>(<span class="no">hwy</span>)) +
