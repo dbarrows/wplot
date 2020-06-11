@@ -26,14 +26,17 @@ Possible CRAN version in the future.
 
 ## Examples
 
-### Light Theme
-
 ``` r
 library(wplot)
+```
+
+``` r
 library(ggplot2)
 library(magrittr)
 library(tibble)
 ```
+
+### Light Theme
 
 ``` r
 ggplot(mpg, aes(displ, hwy, colour = class)) +
@@ -57,8 +60,8 @@ The grid can be turned on/off with the `grid` option, and the font can
 be a made `serif`:
 
 ``` r
-library(tidyverse)
 library(gapminder)
+library(dplyr)
 
 gapminder %>%
     mutate(cc = I(country_colors[match(country, names(country_colors))])) %>%
