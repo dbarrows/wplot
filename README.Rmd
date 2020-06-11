@@ -43,8 +43,8 @@ Possible CRAN version in the future.
 ## Examples
 
 ```{r, include = FALSE}
+install.packages(c('MASS', 'gapminder', 'dplyr', 'magrittr', 'tibble', 'ggplot2'))
 devtools::load_all()
-install.packages(c('MASS', 'gapminder', 'dplyr', 'magrittr', 'tibble'))
 ```
 ```{r, eval = FALSE}
 library(wplot)
