@@ -42,20 +42,19 @@ Possible CRAN version in the future.
 
 ## Examples
 
-### Light Theme
-
 ```{r, include = FALSE}
 devtools::load_all()
-library(ggplot2)
-library(magrittr)
-library(tibble)
 ```
 ```{r, eval = FALSE}
 library(wplot)
+```
+```{r}
 library(ggplot2)
 library(magrittr)
 library(tibble)
 ```
+
+### Light Theme
 
 ```{r scatter}
 ggplot(mpg, aes(displ, hwy, colour = class)) +
