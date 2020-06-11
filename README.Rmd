@@ -43,21 +43,29 @@ Possible CRAN version in the future.
 
 ### Light Theme
 
-```{r libraries}
+```{r, include = FALSE}
+devtools::load_all()
 library(ggplot2)
+library(magrittr)
+library(tibble)
+```
+```{r, eval = FALSE}
 library(wplot)
-
-theme_set(theme_wl())
+library(ggplot2)
+library(magrittr)
+library(tibble)
 ```
 
 ```{r scatter}
 ggplot(mpg, aes(displ, hwy, colour = class)) +
-    geom_point()
+    geom_point() +
+    theme_wl()
 ```
 
 ```{r histogram}
 ggplot(mpg, aes(displ)) +
-    geom_histogram(bins = 30)
+    geom_histogram(bins = 30) +
+    theme_wl()
 ```
 
 ### Options
@@ -90,11 +98,10 @@ ggplot(mpg, aes(displ, hwy, colour = class)) +
 ```
 
 ```{r histogram-dark}
-iris %>%
-    ggplot(aes(Sepal.Width)) +
-        geom_histogram() +
-        theme_wd() +
-        theme(plot.margin = margin(1, 1, 1, 1, "cm"))
+ggplot(mpg, aes(hwy)) +
+    geom_histogram(bins = 30) +
+    theme_wd() +
+    theme(plot.margin = margin(1, 1, 1, 1, "cm"))
 ```
 
 ```{r math-dark}

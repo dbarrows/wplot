@@ -2,8 +2,7 @@
 install:
 	@Rscript -e 'devtools::install()'
 readme:
-	@make install &&\
-	Rscript -e 'rmarkdown::render("README.Rmd")'
+	@Rscript -e 'rmarkdown::render("README.Rmd")'
 check:
 	@Rscript -e 'devtools::check()'
 site:

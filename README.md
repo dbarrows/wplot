@@ -29,22 +29,24 @@ Possible CRAN version in the future.
 ### Light Theme
 
 ``` r
-library(ggplot2)
 library(wplot)
-
-theme_set(theme_wl())
+library(ggplot2)
+library(magrittr)
+library(tibble)
 ```
 
 ``` r
 ggplot(mpg, aes(displ, hwy, colour = class)) +
-    geom_point()
+    geom_point() +
+    theme_wl()
 ```
 
 <img src="man/figures/README-scatter-1.svg" width="100%" />
 
 ``` r
 ggplot(mpg, aes(displ)) +
-    geom_histogram(bins = 30)
+    geom_histogram(bins = 30) +
+    theme_wl()
 ```
 
 <img src="man/figures/README-histogram-1.svg" width="100%" />
@@ -84,11 +86,10 @@ ggplot(mpg, aes(displ, hwy, colour = class)) +
 <img src="man/figures/README-scatter-dark-1.svg" width="100%" />
 
 ``` r
-iris %>%
-    ggplot(aes(Sepal.Width)) +
-        geom_histogram() +
-        theme_wd() +
-        theme(plot.margin = margin(1, 1, 1, 1, "cm"))
+ggplot(mpg, aes(hwy)) +
+    geom_histogram(bins = 30) +
+    theme_wd() +
+    theme(plot.margin = margin(1, 1, 1, 1, "cm"))
 ```
 
 <img src="man/figures/README-histogram-dark-1.svg" width="100%" />
