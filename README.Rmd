@@ -44,6 +44,7 @@ Possible CRAN version in the future.
 
 ```{r, include = FALSE}
 devtools::load_all()
+install.packages(c('MASS', 'gapminder', 'dplyr', 'magrittr', 'tibble'))
 ```
 ```{r, eval = FALSE}
 library(wplot)
@@ -88,12 +89,9 @@ gapminder %>%
 ### Dark theme
 
 ```{r scatter-dark}
-library(colorblindr)
-
 ggplot(mpg, aes(displ, hwy, colour = class)) +
     geom_point() +
     theme_wd() +
-    scale_colour_OkabeIto() +
     theme(plot.margin = margin(1, 1, 1, 1, "cm"))
 ```
 
