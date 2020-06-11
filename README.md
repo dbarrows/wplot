@@ -77,12 +77,9 @@ gapminder %>%
 ### Dark theme
 
 ``` r
-library(colorblindr)
-
 ggplot(mpg, aes(displ, hwy, colour = class)) +
     geom_point() +
     theme_wd() +
-    scale_colour_OkabeIto() +
     theme(plot.margin = margin(1, 1, 1, 1, "cm"))
 ```
 
