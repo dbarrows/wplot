@@ -1,4 +1,4 @@
-test_that("Themes load", {
+test_that('Themes load', {
     p <- ggplot2::ggplot(ggplot2::mpg, aes(displ)) +
             ggplot2::geom_histogram()
     expect_silent({

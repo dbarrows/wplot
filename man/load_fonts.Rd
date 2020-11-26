@@ -7,5 +7,5 @@
 load_fonts()
 }
 \description{
-Load \link{wplot} fonts
+The fonts will be loaded into both the \href{https://cran.r-project.org/web/packages/sysfonts/index.html}{\code{sysfonts}} and \code{\link{extrafont}} databases
 }

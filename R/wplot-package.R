@@ -4,5 +4,5 @@
 #'
 #' @docType package
 #' @name wplot
-#' @import ggplot2 sysfonts showtext
+#' @import ggplot2 extrafont sysfonts
 NULL
